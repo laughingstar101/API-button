@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    --yellow: hsl(60, 80%, 60%);
+    --yellowHover: hsl(60, 80%, 45%);
+    --background: hsl(0, 0%, 7.5%);
+    --fontColor: aliceblue;
+}
+
+body {
+    font-family: Poppins, Inter, Roboto, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background);
+    color: var(--fontColor);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Center it vertically */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button {
+    width: 200px;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 8px;
+    transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+    background-color: var(--yellowHover);
+}
+
+button:active {
+    border: 3px solid yellow;
+    transform: translateY(5px);
+    transition-property: transform;
+}
+
+#fact {
+    margin: 3rem 20%;
+    text-align: center;
+}
+
+#error {
+    margin: 0;
+    color: hsl(9, 100%, 60%);
+}
