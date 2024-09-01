@@ -58,3 +58,8 @@ button:active {
     margin: 0;
     color: hsl(9, 100%, 60%);
 }
+
+#loading {
+    margin: 0;
+    display: none;
+}
