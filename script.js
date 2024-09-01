@@ -3,16 +3,17 @@ document.addEventListener("click", function (event) {
     if (!event.target.matches("#button")) return;
 
     const loading = document.getElementById("loading");
-    loading.style.display = "block";
+    loading.innerHTML = "Loading...";
+    error.innerHTML = "";
 
     fetch("https://uselessfacts.jsph.pl/api/v2/facts/random")
         .then((Response) => Response.json())
         .then((data) => {
-            loading.style.display = "none";
+            loading.innerHTML = "";
             renderFact(data);
         })
         .catch(() => {
-            loading.style.display = "none";
+            loading.innerHTML = "";
             renderError();
         });
 });
