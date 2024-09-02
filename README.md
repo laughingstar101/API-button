@@ -1,4 +1,4 @@
-# A simple project that use some APIs
+# A simple project that uses some APIs
 
 Github Pages link:
 https://laughingstar101.github.io/API-button/
