@@ -5,10 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>API Button</title>
         <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
     </head>
     <body>
         <div class="wrapper">
-            <h1 id="header-thing">Useless Facts</h1>
+            <div class="header-wrapper">
+                <h1 id="header-thing">
+                    <span class="material-symbols-outlined" id="left-arrow"
+                        >arrow_back_ios</span
+                    >Useless Facts
+                    <span class="material-symbols-outlined" id="right-arrow"
+                        >arrow_forward_ios</span
+                    >
+                </h1>
+            </div>
             <button id="button" type="button">GET FACT</button>
             <div class="textCall-wrap">
                 <p id="textCall"></p>

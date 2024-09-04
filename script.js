@@ -48,7 +48,10 @@ document.addEventListener("click", function (event) {
 // Check if header-thing is clicked
 headerThing.addEventListener("click", function () {
     apiListIndex = (apiListIndex + 1) % apiList.length;
-    headerThing.innerHTML = apiListName[apiListIndex];
+    const headerText = `
+    <span class="material-symbols-outlined">arrow_back_ios</span>   ${apiListName[apiListIndex]}   <span class="material-symbols-outlined">arrow_forward_ios</span>
+  `;
+    headerThing.innerHTML = headerText;
     buttonNameIndex = (buttonNameIndex + 1) % buttonNameList.length;
     button.innerHTML = buttonNameList[buttonNameIndex];
     textCall.innerHTML = "";
