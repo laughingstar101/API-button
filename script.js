@@ -1,10 +1,16 @@
-const apiListName = ["Useless Facts", "Funny Jokes", "Pickup Lines"];
+const apiListName = ["Useless Facts", "Funny Jokes", "Pickup Lines", "Insults"];
 const apiList = [
     "https://uselessfacts.jsph.pl/api/v2/facts/random",
     "https://official-joke-api.appspot.com/random_joke",
     "https://rizzapi.vercel.app/random",
+    "https://insult.mattbas.org/api/insult.json",
 ];
-const buttonNameList = ["GET FACT", "GET JOKE", "GET PICKUP LINE"];
+const buttonNameList = [
+    "GET FACT",
+    "GET JOKE",
+    "GET PICKUP LINE",
+    "GET INSULT",
+];
 let buttonNameIndex = 0;
 let apiListIndex = 0;
 
@@ -30,12 +36,15 @@ document.addEventListener("click", function (event) {
                 loading.innerHTML = "";
                 console.log(data);
 
+                //! Add new APIs here
                 if (apiListIndex === 0) {
                     renderText_Facts(data);
                 } else if (apiListIndex === 1) {
                     renderText_Joke(data);
                 } else if (apiListIndex === 2) {
                     renderText_PickupLine(data);
+                } else if (apiListIndex === 3) {
+                    renderText_Insult(data);
                 }
             })
             .catch(() => {
@@ -78,6 +87,10 @@ function renderText_Joke(data) {
 
 function renderText_PickupLine(data) {
     textCall.innerHTML = data.text;
+}
+
+function renderText_Insult(data) {
+    textCall.innerHTML = data.insult;
 }
 
 function renderError() {
